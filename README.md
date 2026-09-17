@@ -1,29 +1,22 @@
-# Dax Fit
+# Dax Fit v2
 
-PWA personal para registrar la rutina Full Body A/B de Álvaro.
+PWA personal para registrar y guiar la rutina Full Body A/B.
 
-## Qué incluye
-- Selector Día A / Día B / Día opcional y recuerdo de la última sesión.
-- Ejercicio activo con series, rango objetivo y descansos.
-- Registro de peso, repeticiones/segundos y dificultad percibida.
-- Temporizador automático tras cada serie, con +30 s y opción de saltarlo.
-- “Máquina ocupada” para mandar el ejercicio al final de la cola.
-- “Omitir ejercicio” con motivo y nota; el dolor queda registrado explícitamente.
-- Historial guardado en el propio dispositivo.
-- Exportación/importación de copia de seguridad JSON.
-- Resumen de sesión listo para copiar y pegar en ChatGPT.
-- Rutina de 4 semanas con ajuste de series en extensión de cuádriceps durante la semana 1.
-- Registro inicial del Día A del 10/09/2026 con los datos comunicados en el chat.
+## Novedades v2
+- Ficha de técnica para cada ejercicio: propósito, pasos, claves, errores y adaptación personal.
+- Dibujos vectoriales offline con posición inicial/final.
+- “Máquina ocupada” ahora permite **dejar para después** o cambiar a una **alternativa de calistenia**.
+- Alternativa sin máquina para cada ejercicio de la rutina (esterilla como material base).
+- Botón **“Sin peso”** en ejercicios compatibles, como hip thrust/puente de glúteos.
+- Los resúmenes distinguen peso corporal, alternativas y ejercicios omitidos.
+- Compatible con los datos guardados por Dax Fit v1 (`localStorage` mantiene la misma clave).
+- Service worker v2 elimina la caché antigua para facilitar futuras actualizaciones.
 
-## Uso rápido
-La forma más sencilla de probarla en un ordenador es servir la carpeta con un servidor local:
+## Actualizar desde v1
+1. En la app actual: **Ajustes → Exportar datos** (copia de seguridad).
+2. Sustituye en GitHub los archivos de la v1 por los de esta carpeta y conserva la estructura `icons/`.
+3. Haz commit y espera a que GitHub Pages publique los cambios.
+4. Abre Dax Fit. Puede ser necesario cerrarla y volverla a abrir una vez para que el nuevo service worker tome el control.
+5. Tus datos deberían seguir ahí porque la clave local no cambia. Si no aparecen, usa **Ajustes → Importar datos**.
 
-```bash
-python -m http.server 8000
-```
-
-Después abre `http://localhost:8000`.
-
-Para instalarla como app en Android, súbela a cualquier alojamiento HTTPS estático (GitHub Pages, Netlify, Cloudflare Pages, etc.), abre la URL en Chrome y usa “Añadir a pantalla de inicio” / “Instalar aplicación”. Una vez instalada, puede seguir funcionando sin conexión gracias al service worker.
-
-> Importante: los datos se guardan localmente en el navegador/dispositivo. Usa “Ajustes → Exportar datos” si quieres conservar una copia.
+> Los dibujos son esquemas orientativos. La guía principal son las instrucciones de técnica y un rango de movimiento sin dolor.

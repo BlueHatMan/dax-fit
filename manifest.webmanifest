@@ -1,7 +1,7 @@
 {
   "name": "Dax Fit · Entrenador personal",
   "short_name": "Dax Fit",
-  "description": "Registro personal de entrenamientos Full Body A/B.",
+  "description": "Entrenamiento Full Body A/B con técnica guiada, alternativas y registro.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
