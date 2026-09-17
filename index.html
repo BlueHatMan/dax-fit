@@ -7,6 +7,7 @@
   <meta name="description" content="Dax Fit · entrenador personal, técnica y registro de fuerza." />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <title>Dax Fit</title>
   <style>
     :root{--bg:#08111f;--panel:#101c2f;--panel2:#15243a;--text:#f4f7fb;--muted:#9fb0c8;--line:rgba(255,255,255,.09);--accent:#5ea2ff;--accent2:#8bd1ff;--ok:#4fd1a5;--warn:#ffcb6b;--danger:#ff7b8b;--shadow:0 18px 50px rgba(0,0,0,.28);--radius:22px}
@@ -20,7 +21,7 @@
 <div id="restPanel" class="rest-panel"><div id="timerRing" class="timer-ring">90</div><div class="timer-text"><b>Descanso</b><span id="timerLabel">Antes de la siguiente serie</span></div><div class="timer-actions"><button id="add30">+30</button><button id="skipTimer">Saltar</button></div></div>
 <section id="trainView" class="view active"><div class="card overview"><div><div class="eyebrow">Entrenamiento</div><div id="lastSession" class="last">Última sesión: —</div></div><div id="dayTabs" class="day-tabs"></div></div><div class="progress-wrap"><div class="progress-meta"><span id="progressText">Elige tu entrenamiento</span><span id="progressPercent">0%</span></div><div class="progress"><div id="progressBar"></div></div></div><div id="exerciseMount"></div></section>
 <section id="historyView" class="view"><h2 class="section-title">Historial</h2><div id="historyList"></div></section>
-<section id="settingsView" class="view"><h2 class="section-title">Ajustes</h2><div class="card settings-card"><h3>Copia de seguridad</h3><p>Los entrenamientos se guardan en este dispositivo. Exporta una copia antes de borrar datos, cambiar de móvil o actualizar la app.</p><div class="row"><button id="exportBtn" class="secondary">Exportar datos</button><button id="importBtn" class="secondary">Importar datos</button><input id="importFile" type="file" accept="application/json" hidden></div></div><div class="card settings-card"><h3>Sesión en curso</h3><p>Si algo ha quedado a medias, puedes reiniciar solo la sesión actual. El historial no se borra.</p><button id="resetCurrentBtn" class="secondary danger" style="width:100%">Reiniciar sesión actual</button></div><div class="card settings-card"><h3>Dax Fit v2</h3><p>Técnica guiada, dibujos offline, alternativas de calistenia y registro “sin peso”. El formato de copia de seguridad sigue siendo compatible con v1.</p><div class="version">Versión 2.0 · datos locales</div></div></section>
+<section id="settingsView" class="view"><h2 class="section-title">Ajustes</h2><div class="card settings-card"><h3>Copia de seguridad</h3><p>Los entrenamientos se guardan en este dispositivo. Exporta una copia antes de borrar datos, cambiar de móvil o actualizar la app.</p><div class="row"><button id="exportBtn" class="secondary">Exportar datos</button><button id="importBtn" class="secondary">Importar datos</button><input id="importFile" type="file" accept="application/json" hidden></div></div><div class="card settings-card"><h3>Sesión en curso</h3><p>Si algo ha quedado a medias, puedes reiniciar solo la sesión actual. El historial no se borra.</p><button id="resetCurrentBtn" class="secondary danger" style="width:100%">Reiniciar sesión actual</button></div><div class="card settings-card"><h3>Dax Fit v2.1</h3><p>Técnica guiada, dibujos offline, alternativas de calistenia y registro “sin peso”. El formato de copia de seguridad sigue siendo compatible con v1.</p><div class="version">Versión 2.1 · datos locales</div></div></section>
 </div>
 <nav class="nav"><button class="active" data-view="train">Entrenar</button><button data-view="history">Historial</button><button data-view="settings">Ajustes</button></nav>
 
@@ -32,7 +33,7 @@
 <div id="toast" class="toast"></div>
 
 <script>
-const APP_VERSION='2.0';
+const APP_VERSION='2.1';
 const STORE='daxfit_v1'; // se mantiene para conservar los datos de la v1
 
 const TECHNIQUE={

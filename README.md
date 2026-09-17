@@ -1,22 +1,38 @@
-# Dax Fit v2
+# Dax Fit v2.1 — versión completa corregida
 
 PWA personal para registrar y guiar la rutina Full Body A/B.
 
-## Novedades v2
-- Ficha de técnica para cada ejercicio: propósito, pasos, claves, errores y adaptación personal.
+## Incluye
+- Día A, Día B y día opcional.
+- Registro de peso, repeticiones y dificultad percibida.
+- Temporizador automático de descansos.
+- Historial local y exportación/importación de datos.
+- Ficha de técnica de cada ejercicio.
 - Dibujos vectoriales offline con posición inicial/final.
-- “Máquina ocupada” ahora permite **dejar para después** o cambiar a una **alternativa de calistenia**.
-- Alternativa sin máquina para cada ejercicio de la rutina (esterilla como material base).
-- Botón **“Sin peso”** en ejercicios compatibles, como hip thrust/puente de glúteos.
-- Los resúmenes distinguen peso corporal, alternativas y ejercicios omitidos.
-- Compatible con los datos guardados por Dax Fit v1 (`localStorage` mantiene la misma clave).
-- Service worker v2 elimina la caché antigua para facilitar futuras actualizaciones.
+- “Máquina ocupada” con:
+  - Dejar para después.
+  - Alternativa de calistenia.
+- Alternativa sin máquina para cada ejercicio.
+- Botón “Sin peso” para ejercicios compatibles.
+- Iconos PWA incluidos en `icons/`.
+- Manifest corregido para Android.
+- Caché `dax-fit-v4` para forzar la actualización.
+- Compatible con los datos locales de versiones anteriores.
 
-## Actualizar desde v1
-1. En la app actual: **Ajustes → Exportar datos** (copia de seguridad).
-2. Sustituye en GitHub los archivos de la v1 por los de esta carpeta y conserva la estructura `icons/`.
-3. Haz commit y espera a que GitHub Pages publique los cambios.
-4. Abre Dax Fit. Puede ser necesario cerrarla y volverla a abrir una vez para que el nuevo service worker tome el control.
-5. Tus datos deberían seguir ahí porque la clave local no cambia. Si no aparecen, usa **Ajustes → Importar datos**.
+## Cómo actualizar en GitHub
+1. En Dax Fit actual: Ajustes → Exportar datos.
+2. Descomprime este ZIP.
+3. En tu repositorio, sustituye los archivos antiguos por TODO el contenido de esta carpeta:
+   - `index.html`
+   - `manifest.webmanifest`
+   - `sw.js`
+   - `README.md`
+   - carpeta `icons/` completa
+4. Haz commit.
+5. Espera a que GitHub Pages publique.
+6. Comprueba que esta URL muestra el icono:
+   `https://TU-USUARIO.github.io/TU-REPOSITORIO/icons/icon-512.png`
+7. Abre después la URL normal de Dax Fit en Chrome.
+8. Cierra y vuelve a abrir la PWA instalada. Si Android sigue mostrando el icono antiguo, exporta datos, desinstala la PWA y vuelve a instalarla desde Chrome.
 
-> Los dibujos son esquemas orientativos. La guía principal son las instrucciones de técnica y un rango de movimiento sin dolor.
+Los datos se guardan localmente en el dispositivo. La copia exportada es la red de seguridad.
